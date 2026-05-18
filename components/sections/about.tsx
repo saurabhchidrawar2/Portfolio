@@ -74,7 +74,7 @@ export function AboutSection() {
                 )
               })}
             </motion.div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

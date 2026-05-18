@@ -84,7 +84,7 @@ export function Footer() {
               © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-1">
-              Built with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using
+              Built using
               Next.js & Tailwind
             </p>
           </div>

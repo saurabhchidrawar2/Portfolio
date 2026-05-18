@@ -4,25 +4,25 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #0B0F19;
-  --card: #f8fafc;
-  --card-foreground: #0B0F19;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
   --popover: #ffffff;
-  --popover-foreground: #0B0F19;
-  --primary: #3B82F6;
+  --popover-foreground: #0f172a;
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --secondary: #8B5CF6;
+  --secondary: #7c3aed;
   --secondary-foreground: #ffffff;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #8B5CF6;
+  --muted: #e2e8f0;
+  --muted-foreground: #475569;
+  --accent: #7c3aed;
   --accent-foreground: #ffffff;
-  --destructive: #ef4444;
+  --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
+  --border: #cbd5e1;
   --input: #e2e8f0;
-  --ring: #3B82F6;
+  --ring: #2563eb;
   --chart-1: #3B82F6;
   --chart-2: #8B5CF6;
   --chart-3: #06b6d4;
@@ -149,17 +149,27 @@
 
 /* Glassmorphism utilities */
 .glass {
-  background: rgba(17, 24, 39, 0.7);
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.dark .glass {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .glass-light {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.dark .glass-light {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* Gradient text */
@@ -172,9 +182,13 @@
 
 /* Animated gradient background */
 .animated-gradient {
-  background: linear-gradient(-45deg, #0B0F19, #111827, #1e293b, #0B0F19);
+  background: linear-gradient(-45deg, #eef2ff, #f8fafc, #ede9fe, #f1f5f9);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
+}
+
+.dark .animated-gradient {
+  background: linear-gradient(-45deg, #0B0F19, #111827, #1e293b, #0B0F19);
 }
 
 @keyframes gradientShift {

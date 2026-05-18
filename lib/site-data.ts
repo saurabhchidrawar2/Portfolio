@@ -9,7 +9,7 @@ export const siteConfig = {
   phone: "+91-9579646281",
   phoneHref: "tel:+919579646281",
   resumeUrl: "/resume.pdf",
-  brand: "<SC />",
+  brand: "SC",
   github: "https://github.com/saurabhchidrawar",
   linkedin: "https://linkedin.com/in/saurabh-chidrawar",
   summary:

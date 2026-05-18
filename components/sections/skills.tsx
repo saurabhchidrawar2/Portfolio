@@ -48,9 +48,7 @@ export function SkillsSection() {
                     <div key={skill.name}>
                       <div className="flex justify-between mb-2">
                         <span className="text-sm font-medium">{skill.name}</span>
-                        <span className="text-sm text-muted-foreground">
-                          {skill.level}%
-                        </span>
+                        <span className="text-sm text-muted-foreground">&nbsp;</span>
                       </div>
                       <div className="h-2 bg-muted rounded-full overflow-hidden">
                         <motion.div
