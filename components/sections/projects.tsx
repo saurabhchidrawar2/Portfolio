@@ -2,10 +2,18 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+<<<<<<< HEAD
 import { ExternalLink, Layers } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { projects } from "@/lib/site-data"
+=======
+import { Github, ExternalLink, Layers } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { projects, siteConfig } from "@/lib/site-data"
+>>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
 
 export function ProjectsSection() {
   const ref = useRef(null)
@@ -53,16 +61,38 @@ export function ProjectsSection() {
                   <div className="p-3 rounded-lg bg-primary/10">
                     <Layers className="h-6 w-6 text-primary" />
                   </div>
+<<<<<<< HEAD
                   {"live" in project && project.live && (
                     <Link
                       href={project.live}
+=======
+                  <div className="flex items-center gap-2">
+                    <Link
+                      href={project.github}
+>>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 text-muted-foreground hover:text-foreground transition-colors"
                     >
+<<<<<<< HEAD
                       <ExternalLink className="h-5 w-5" />
                     </Link>
                   )}
+=======
+                      <Github className="h-5 w-5" />
+                    </Link>
+                    {"live" in project && project.live && (
+                      <Link
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        <ExternalLink className="h-5 w-5" />
+                      </Link>
+                    )}
+                  </div>
+>>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
                 </div>
 
                 <h3 className="text-xl font-bold font-[family-name:var(--font-space-grotesk)] mb-3 group-hover:text-primary transition-colors">
@@ -94,6 +124,32 @@ export function ProjectsSection() {
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
+=======
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="text-center mt-12"
+          >
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-border hover:bg-muted gap-2"
+              asChild
+            >
+              <Link
+                href={siteConfig.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-5 w-5" />
+                View on GitHub
+              </Link>
+            </Button>
+          </motion.div>
+>>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
         </motion.div>
       </div>
     </section>

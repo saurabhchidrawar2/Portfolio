@@ -10,8 +10,13 @@ export const siteConfig = {
   phoneHref: "tel:+919579646281",
   resumeUrl: "/resume.pdf",
   brand: "SC",
+<<<<<<< HEAD
   github: "https://github.com/saurabhchidrawar2",
   linkedin: "https://www.linkedin.com/in/sourabh-b95701208",
+=======
+  github: "https://github.com/saurabhchidrawar",
+  linkedin: "https://linkedin.com/in/saurabh-chidrawar",
+>>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
   summary:
     "Results-driven Java Backend Engineer with 3+ years of experience designing and developing scalable microservices, cloud-native applications, and distributed systems using Java, Spring Boot, Kafka, and AWS. Proven expertise in event-driven architectures, AWS EMR migrations, and optimizing backend systems for high availability and performance.",
   about: [
@@ -167,6 +172,10 @@ export const projects = [
       "AWS EKS",
       "MS SQL",
     ],
+<<<<<<< HEAD
+=======
+    github: siteConfig.github,
+>>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
     featured: true,
   },
   {
@@ -183,6 +192,10 @@ export const projects = [
       "S3",
       "Python",
     ],
+<<<<<<< HEAD
+=======
+    github: siteConfig.github,
+>>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
     featured: true,
   },
   {
@@ -199,6 +212,10 @@ export const projects = [
       "PostgreSQL",
       "Swagger",
     ],
+<<<<<<< HEAD
+=======
+    github: siteConfig.github,
+>>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
     featured: false,
   },
 ]
