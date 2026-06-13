@@ -36,74 +36,77 @@ export function ProjectsSection() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative p-6 rounded-xl glass hover:glow-blue transition-all duration-500"
-              >
-                {project.featured && (
-                  <motion.div className="absolute -top-3 -right-3 px-3 py-1 bg-gradient-to-r from-primary to-secondary text-xs font-semibold rounded-full text-white">
-                    Featured
-                  </motion.div>
-                )}
+            {projects.map((project, index) => {
+              const projectWithLive = project as { live?: string }
+              return (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative p-6 rounded-xl glass hover:glow-blue transition-all duration-500"
+                >
+                  {project.featured && (
+                    <motion.div className="absolute -top-3 -right-3 px-3 py-1 bg-gradient-to-r from-primary to-secondary text-xs font-semibold rounded-full text-white">
+                      Featured
+                    </motion.div>
+                  )}
 
-                <div className="flex items-start justify-between mb-4">
-                  <div className="p-3 rounded-lg bg-primary/10">
-                    <Layers className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Link
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Github className="h-5 w-5" />
-                    </Link>
-                    {"live" in project && project.live && (
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="p-3 rounded-lg bg-primary/10">
+                      <Layers className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="flex items-center gap-2">
                       <Link
-                        href={project.live}
+                        href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 text-muted-foreground hover:text-foreground transition-colors"
                       >
-                        <ExternalLink className="h-5 w-5" />
+                        <Github className="h-5 w-5" />
                       </Link>
-                    )}
+                      {projectWithLive.live && (
+                        <Link
+                          href={projectWithLive.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          <ExternalLink className="h-5 w-5" />
+                        </Link>
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                <h3 className="text-xl font-bold font-[family-name:var(--font-space-grotesk)] mb-3 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
+                  <h3 className="text-xl font-bold font-[family-name:var(--font-space-grotesk)] mb-3 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
 
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="mb-4 p-3 rounded-lg bg-muted/30">
-                  <p className="text-xs text-muted-foreground">
-                    <span className="font-semibold text-foreground">Architecture: </span>
-                    {project.architecture}
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                    {project.description}
                   </p>
-                </div>
 
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <Badge
-                      key={tech}
-                      variant="secondary"
-                      className="bg-primary/10 text-primary border-primary/20 text-xs"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+                  <div className="mb-4 p-3 rounded-lg bg-muted/30">
+                    <p className="text-xs text-muted-foreground">
+                      <span className="font-semibold text-foreground">Architecture: </span>
+                      {project.architecture}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="secondary"
+                        className="bg-primary/10 text-primary border-primary/20 text-xs"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
 
           <motion.div
