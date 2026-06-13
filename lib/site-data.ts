@@ -10,18 +10,13 @@ export const siteConfig = {
   phoneHref: "tel:+919579646281",
   resumeUrl: "/resume.pdf",
   brand: "SC",
-<<<<<<< HEAD
   github: "https://github.com/saurabhchidrawar2",
   linkedin: "https://www.linkedin.com/in/sourabh-b95701208",
-=======
-  github: "https://github.com/saurabhchidrawar",
-  linkedin: "https://linkedin.com/in/saurabh-chidrawar",
->>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
   summary:
-    "Results-driven Java Backend Engineer with 3+ years of experience designing and developing scalable microservices, cloud-native applications, and distributed systems using Java, Spring Boot, Kafka, and AWS. Proven expertise in event-driven architectures, AWS EMR migrations, and optimizing backend systems for high availability and performance.",
+    "Results-driven Java Backend Engineer with 3+ years of experience designing and developing scalable microservices, cloud-native applications, and distributed systems using Java, Spring Boot, K[...]",
   about: [
-    "I'm a Java Backend Engineer with 3+ years of experience building enterprise-grade financial and analytics applications. I specialize in scalable microservices, Apache Kafka event streaming, and AWS cloud infrastructure.",
-    "At S&P Global, I design cloud-native services on AWS EKS, lead Spark ETL migrations to AWS EMR, and strengthen security and observability across distributed systems. I also build automation frameworks that accelerate release cycles.",
+    "I'm a Java Backend Engineer with 3+ years of experience building enterprise-grade financial and analytics applications. I specialize in scalable microservices, Apache Kafka event streaming, a[...]",
+    "At S&P Global, I design cloud-native services on AWS EKS, lead Spark ETL migrations to AWS EMR, and strengthen security and observability across distributed systems. I also build automation f[...]",
     "I collaborate closely with cross-functional Agile teams to deliver resilient, business-critical software—with a strong focus on CI/CD, secure coding, and production reliability.",
   ],
   education: {
@@ -172,10 +167,7 @@ export const projects = [
       "AWS EKS",
       "MS SQL",
     ],
-<<<<<<< HEAD
-=======
     github: siteConfig.github,
->>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
     featured: true,
   },
   {
@@ -192,10 +184,7 @@ export const projects = [
       "S3",
       "Python",
     ],
-<<<<<<< HEAD
-=======
     github: siteConfig.github,
->>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
     featured: true,
   },
   {
@@ -212,10 +201,7 @@ export const projects = [
       "PostgreSQL",
       "Swagger",
     ],
-<<<<<<< HEAD
-=======
     github: siteConfig.github,
->>>>>>> 2f6972b38133e5c19a723cca1abaf803c66db8b7
     featured: false,
   },
 ]
